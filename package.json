@@ -1,0 +1,25 @@
+{
+  "name": "basebotsdiscord",
+  "version": "0.0.1",
+  "description": "Base gratuita e fácil de usar para criar bots do Discord em JavaScript, ideal para desenvolvedores de todos os níveis.",
+  "main": "index.js",
+  "scripts": {
+    "node": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardo-as1/BaseBotsDiscord.git"
+  },
+  "author": "ricardo-as1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardo-as1/BaseBotsDiscord/issues"
+  },
+  "homepage": "https://github.com/ricardo-as1/BaseBotsDiscord#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "discord.js": "^14.16.3",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
