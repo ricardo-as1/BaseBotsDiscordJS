@@ -24,7 +24,6 @@ BaseBotsDiscordJS é uma estrutura simples e fácil de usar para criar bots do D
 - [Recursos Principais](#principais)
 - [Começando](#comecando)
 - [Estrutura do Projeto](#estrutura)
-- [Author](#author)
 
 ***
 
