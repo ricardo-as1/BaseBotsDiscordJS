@@ -1,6 +1,6 @@
 {
   "name": "basebotsdiscord",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Base gratuita e fácil de usar para criar bots do Discord em JavaScript, ideal para desenvolvedores de todos os níveis.",
   "main": "index.js",
   "scripts": {
