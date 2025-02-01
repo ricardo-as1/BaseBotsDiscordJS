@@ -3,7 +3,7 @@
  * @instagram https://www.instagram.com/kingzin.021/
  * @github https://github.com/ricardo-as1
  * @server_support https://discord.gg/HKkHaqPNac
- * @see https://github.com/ricardo-as1/BaseBotsDiscord/blob/main/Src/Commands/Information/ping.js
+ * @see https://github.com/ricardo-as1/BaseBotsDiscordJS/blob/main/Src/Commands/Information/ping.js
  */
 
 /**
@@ -12,13 +12,13 @@
  */
 
 const { ActionRowBuilder, ButtonBuilder, EmbedBuilder } = require('discord.js');
-const { DefaultEmbedColor } = require('../../Config/Colors.js');
+const { Sync: { defaultPrefix }, Colors: { defaultEmbedColor } } = require('../../ConfigHub/System.js');
 
 module.exports = {
   name: "ping",
   description: "Mostra o ping do bot e inclui um botão para atualizar.",
   category: "Global",
-  usage: "h!ping",
+  usage: `${defaultPrefix}ping`,
   aliases: ['pong', 'latency'],
   permission: [],
 
@@ -44,7 +44,7 @@ module.exports = {
           **Gateway Ping :** \`${ping} ms\`
           **API Ping :** \`${apiPing} ms\`
         `)
-        .setColor(DefaultEmbedColor)
+        .setColor(defaultEmbedColor)
         .setFooter({ text: `${message.guild.name}`, iconURL: guildIconURL })
         .setTimestamp();
     };
@@ -56,7 +56,7 @@ module.exports = {
           new ButtonBuilder()
             .setCustomId('ping_refresh')
             .setLabel('Atualizar')
-            .setEmoji('<a:Load:1273063236354179072>') // Emoji de loading
+            .setEmoji('🔄') // Emoji de loading
             .setStyle('Primary')
         );
     };

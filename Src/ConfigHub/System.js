@@ -1,9 +1,8 @@
 /**
  * @author ricardo-as1
- * @instagram https://www.instagram.com/kingzin.021/
- * @github https://github.com/ricardo-as1
- * @server_support https://discord.gg/HKkHaqPNac
- * @see https://github.com/ricardo-as1/BaseBotsDiscord/blob/main/Src/ConfigHub/System.js
+ * @github https://github.com/ricardo-as1/Hyouka.git
+ * @support https://discord.gg/5MWurPkP6S
+ * @see https://github.com/ricardo-as1/Hyouka/blob/HyoukaDefaultBranch/Src/ConfigHub/System.js.yaml
  */
 
 // Crie um bot: https://discord.com/developers/applications
@@ -11,19 +10,19 @@
 
 module.exports = {
   Sync: {
-    token: process.env.token || "Coloque o token do seu bot aqui!",
-    defaultPrefix: "Coloque o prefixo do seu bot aqui!",
+    token: process.env.token || "Coloque o token do bot aqui!",
+    defaultPrefix: "Coloque o prefixo padrão do bot aqui!",
     botInvite: "Coloque o link de convite do seu bot aqui!",
     supportServer: "Coloque o link do seu servidor de suporte aqui!",
     idOwner: "Coloque o id do seu bot aqui!",
   },
 
   Colors: {
-    defaultEmbedColor: "Coloque aqui e a baixo a cor padrão dos embeds!",
-    errorEmbedColor: "Coloque aqui e a baixo a cor de erro dos embeds!",
-    successEmbedColor: "Coloque aqui e a baixo a cor de sucesso dos embeds!",
-    warningEmbedColor: "Coloque aqui e a baixo a cor de aviso dos embeds!",
-    infoEmbedColor: "Coloque aqui e a baixo a cor de info dos embeds!",
+    defaultEmbedColor: "#5865F2",
+    errorEmbedColor: "#FF0000",
+    successEmbedColor: "#00FF00",
+    warningEmbedColor: "#FFA500",
+    infoEmbedColor: "#DFDB00FF",
   },
 
   Logs: {
@@ -35,10 +34,10 @@ module.exports = {
     leaveChannel: "Coloque aqui o id do canal de leave(Saida)!",
   },
 
-  // Cores localizadas em: LoadCommands.js & LoadEvents.js.
+  // Cores localizadas em: LoadCommands.js, LoadEvents.js, Ready.js.
   ChalkColors: {
     ChalkWhite: "#e3edf7",
-    ChalkOrange: "##FFA500",
+    ChalkOrange: "#FFA500",
     ChalkBlue: "#5865F2",
   }
 }

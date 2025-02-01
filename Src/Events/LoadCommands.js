@@ -3,7 +3,7 @@
  * @instagram https://www.instagram.com/kingzin.021/
  * @github https://github.com/ricardo-as1
  * @server_support https://discord.gg/HKkHaqPNac
- * @see https://github.com/ricardo-as1/BaseBotsDiscord/blob/main/Src/Events/LoadCommands.js
+ * @see https://github.com/ricardo-as1/BaseBotsDiscordJS/blob/main/Src/Events/LoadCommands.js
  */
 
 const fs = require('fs');
@@ -65,35 +65,4 @@ const loadCommands = (client) => {
   client.commandsLoaded = true;
 };
 
-/**
- * Manipula mensagens e executa comandos se válidos.
- * @param {Object} message - A mensagem recebida.
- * @param {Object} client - O cliente do Discord.
- */
-
-const handleMessage = async (message, client) => {
-  if (message.author.bot || message.channel.type === 'DM') return;
-
-  const prefix = (await getPrefix(message.guild.id)) || default_prefix;
-
-  if (!message.content.toLowerCase().startsWith(prefix.toLowerCase())) return;
-
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const cmd = args.shift().toLowerCase();
-
-  if (!cmd) return;
-
-  let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
-
-  if (command) {
-    try {
-      await command.run(client, message, args);
-    } catch (err) {
-      console.error(chalk.red('💥 | Erro ao executar o comando:'), err);
-    }
-  } else {
-    console.warn(chalk.yellow(`🚧 | Comando não encontrado: ${cmd}`));
-  }
-};
-
-module.exports = loadCommands, handleMessage;
+module.exports = loadCommands;

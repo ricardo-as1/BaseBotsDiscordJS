@@ -7,7 +7,7 @@
 
 <div align="center">
 
-![Versão](https://img.shields.io/badge/Versão-v0.0.2_alpha-blue.svg)
+![Versão](https://img.shields.io/badge/Versão-v1.0.2-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Development-blue.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](/LICENSE)
 
@@ -102,7 +102,7 @@ Contribuições são **bem-vindas!** Para contribuir:
 
 Este projeto está sob a licença MIT. Sinta-se livre para usá-lo e modificá-lo.
 
-## 📲 Contato
+##
 
 <p align="center">Criado por:
   <a href="https://github.com/ricardo-as1" rel="noopener">

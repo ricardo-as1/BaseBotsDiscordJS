@@ -22,7 +22,7 @@
  * @instagram https://www.instagram.com/kingzin.021/
  * @github https://github.com/ricardo-as1
  * @server_support https://discord.gg/HKkHaqPNac
- * @see https://github.com/ricardo-as1/BaseBotsDiscord/blob/main/Base/BaseCommands.js
+ * @see https://github.com/ricardo-as1/BaseBotsDiscordJS/blob/main/Base/BaseCommands.js
  */
 
 /**

@@ -3,16 +3,15 @@
  * @instagram https://www.instagram.com/kingzin.021/
  * @github https://github.com/ricardo-as1
  * @server_support https://discord.gg/HKkHaqPNac
- * @see https://github.com/ricardo-as1/BaseBotsDiscord/blob/main/Src/Events/Ready.js
+ * @see https://github.com/ricardo-as1/BaseBotsDiscordJS/blob/main/Src/Events/Ready.js
  */
 
-
 const chalk = require("chalk");
-
 const { ActivityType } = require("discord.js");
-const { ChalkColors: { ChalkBlue } } = require("../Config/Colors.js");
+const { ChalkColors: { ChalkBlue } } = require("../ConfigHub/System.js");
+
 // Use se caso queira adicionar uma database ao bot
-//const { notifyDatabaseStatus } = require('../Database/DataBase.js');
+const { notifyDatabaseStatus } = require('../Database/Database.js');
 
 module.exports = {
   name: "ready",
@@ -22,8 +21,8 @@ module.exports = {
     // Definindo as atividades do bot
     const activities = [
       {
-        name: ``,
-        type: ActivityType.Watching
+        name: `Hello! I'm ${client.user.username}`,
+        type: ActivityType.Streaming,
       },
       // Podem ser adicionadas aqui: Watching, Listening, Playing, Streaming, etc.
     ];
@@ -39,8 +38,8 @@ module.exports = {
       currentActivity = (currentActivity + 1) % activities.length;
     }
 
-    // Atualiza a presença do bot a cada 8 segundos
-    setInterval(updatePresence, 8000);
+    // Atualiza a presença do bot a cada 10 segundos
+    setInterval(updatePresence, 10000);
     updatePresence();
 
     // Função para imprimir um separador no console
@@ -54,12 +53,12 @@ module.exports = {
     const userCount = client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0);
     const serverCount = client.guilds.cache.size;
     const uptime = process.uptime().toFixed(2);
-    //const Database = notifyDatabaseStatus(true); // Você pode passar true ou false com base no estado da conexão.
+    const Database = notifyDatabaseStatus(true); // Você pode passar true ou false com base no estado da conexão.
 
     // Grupo de informações sobre a database
-    //console.group(chalk.greenBright.bold.italic('✔ Database Status'));
-    //console.log(chalk.white.italic("🗃️"), chalk.hex(ChalkBlue).underline.italic(Database));
-    //console.groupEnd();
+    console.group(chalk.greenBright.bold.italic('✔ Database Status'));
+    console.log(chalk.white.italic("🗃️ "), chalk.hex(ChalkBlue).underline.italic(Database));
+    console.groupEnd();
 
     console.log('');
 
@@ -86,10 +85,10 @@ module.exports = {
       "📦",
       `${chalk.hex(ChalkBlue).underline.italic("Discord.js")} ${chalk.white.italic(require("discord.js").version)}`,
       "/",
-      "🌍",
+      "📦",
       `${chalk.hex(ChalkBlue).underline.italic("NodeJs")} ${chalk.white.italic(process.versions.node)}`,
       "/",
-      "⏱️ ",
+      "📦",
       `${chalk.hex(ChalkBlue).underline.italic("Uptime")} ${chalk.white.italic(uptime + 's')}`
     );
     console.groupEnd();
